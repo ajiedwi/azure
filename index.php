@@ -4,10 +4,10 @@ include 'connection.php'
 
     $sql_select = "SELECT * FROM user";
     $stmt = $conn->query($sql_select);
-    $registrants = $stmt->fetchAll(); 
-    if(count($registrants) > 0) {
-        echo 'sukses';   
-    }
+    // $registrants = $stmt->fetchAll(); 
+    // if(count($registrants) > 0) {
+    //     echo 'sukses';   
+    // }
 ?>
 <!DOCTYPE html>
 <head>
