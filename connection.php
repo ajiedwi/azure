@@ -9,8 +9,8 @@
 	$pass = "@jie4798";
 	$db = "dbo.user";
 	try {
-	    $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
-	    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+	    $conn = new PDO("sqlsrv:server = tcp:ajiedwi.database.windows.net,1433; Database = ajiedwi", "ajie", "@jie4798");
+    	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	} catch(PDOException $e) {
 	    echo "Failed: " . $e;
 	}
