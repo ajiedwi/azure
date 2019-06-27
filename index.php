@@ -1,7 +1,30 @@
 <?php
 
-// include 'connection.php'
-
+include 'connection.php'
+try {
+            $sql_select = "SELECT * FROM Registration";
+            $stmt = $conn->query($sql_select);
+            $registrants = $stmt->fetchAll(); 
+            if(count($registrants) > 0) {
+                echo "<h2>People who are registered:</h2>";
+                echo "<table>";
+                echo "<tr><th>Name</th>";
+                echo "<th>Email</th>";
+                echo "<th>Job</th>";
+                echo "<th>Date</th></tr>";
+                foreach($registrants as $registrant) {
+                    echo "<tr><td>".$registrant['name']."</td>";
+                    echo "<td>".$registrant['email']."</td>";
+                    echo "<td>".$registrant['job']."</td>";
+                    echo "<td>".$registrant['date']."</td></tr>";
+                }
+                echo "</table>";
+            } else {
+                echo "<h3>No one is currently registered.</h3>";
+            }
+        } catch(Exception $e) {
+            echo "Failed: " . $e;
+        }
     // $sql_select = "SELECT * FROM user";
     // try{
     //     $stmt = $conn->query($sql_select);
@@ -13,16 +36,16 @@
     //     echo 'sukses';   
     // }
 
-    $host = "ajiedwi.database.windows.net";
-    $user = "ajie";
-    $pass = "@jie4798";
-    $db = "ajiedwi";
-    try {
-        $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
-        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    } catch(Exception $e) {
-        echo "Failed: " . $e;
-    }
+    // $host = "ajiedwi.database.windows.net";
+    // $user = "ajie";
+    // $pass = "@jie4798";
+    // $db = "ajiedwi";
+    // try {
+    //     $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
+    //     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    // } catch(Exception $e) {
+    //     echo "Failed: " . $e;
+    // }
 ?>
 <!DOCTYPE html>
 <head>
