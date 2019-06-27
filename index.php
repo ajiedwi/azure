@@ -2,7 +2,9 @@
 
 include 'connection.php'
 
-
+$sql = "select * from [dbo].[user]";
+$result = $conn->query($sql); 
+print_r($result);
 
 ?>
 <!DOCTYPE html>
