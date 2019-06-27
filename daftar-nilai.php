@@ -36,7 +36,7 @@ var_dump($result)
                     <td>Aksi</td>
                 </tr>
             </thead>
-            <tbody>
+            <!-- <tbody>
             <?php
             $sql = "SELECT * FROM nilai";
             $result = $conn->query($sql);
@@ -70,7 +70,7 @@ var_dump($result)
                 </td>
             </tr>
             <?php } ?>
-            </tbody>
+            </tbody> -->
         </table>
         </div>
         <div class="col-md-2"></div>
