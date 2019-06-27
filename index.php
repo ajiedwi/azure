@@ -3,7 +3,11 @@
 include 'connection.php'
 
     $sql_select = "SELECT * FROM user";
-    $stmt = $conn->query($sql_select);
+    try{
+        $stmt = $conn->query($sql_select);
+    } catch (Exception $e){
+        echo $e;
+    }
     // $registrants = $stmt->fetchAll(); 
     // if(count($registrants) > 0) {
     //     echo 'sukses';   
