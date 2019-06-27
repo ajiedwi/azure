@@ -2,9 +2,9 @@
 
 include 'connection.php'
 
-$sql = "SELECT * FROM 'dbo.user'";
+$sql = "select * from [dbo].[user]";
 $result = $conn->query($sql); 
-var_dump($result); 
+var_dump($result) 
 
 ?>
 <!DOCTYPE html>
