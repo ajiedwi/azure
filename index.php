@@ -2,13 +2,12 @@
 
 include 'connection.php'
 
-$sql = "select * from user";
-$result = $conn->query($sql); 
-$registrants = $result->fetchAll(); 
-            if(count($registrants) > 0) {
-                echo 'sukses'
-            }
-
+    $sql_select = "SELECT * FROM user";
+    $stmt = $conn->query($sql_select);
+    $registrants = $stmt->fetchAll(); 
+    if(count($registrants) > 0) {
+        echo 'sukses';   
+    }
 ?>
 <!DOCTYPE html>
 <head>
