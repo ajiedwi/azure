@@ -1,14 +1,13 @@
 <?php
 
 include 'connection.php'
-echo "select * from `[dbo].[user]`";
-echo "select * from [dbo].[user]"
-// $sql = "select * from `[dbo].[user]`";
-// $result = $conn->query($sql); 
-// $registrants = $result->fetchAll(); 
-//             if(count($registrants) > 0) {
-//                 echo 'sukses'
-//             }
+
+$sql = "select * from user";
+$result = $conn->query($sql); 
+$registrants = $result->fetchAll(); 
+            if(count($registrants) > 0) {
+                echo 'sukses'
+            }
 
 ?>
 <!DOCTYPE html>
