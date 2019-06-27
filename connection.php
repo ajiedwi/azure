@@ -14,5 +14,4 @@
 	} catch(PDOException $e) {
 	    echo "Failed: " . $e;
 	}
-	phpinfo()
 ?>
