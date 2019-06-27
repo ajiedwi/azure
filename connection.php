@@ -15,7 +15,7 @@
 	//     echo "Failed: " . $e;
 	// }
 	try{
-		$connectionInfo = array("UID" => "ajie@ajiedwi", "pwd" => "{your_password_here}", "Database" => "ajiedwi", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+		$connectionInfo = array("UID" => "ajie@ajiedwi", "pwd" => "@jie4798", "Database" => "ajiedwi", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 		$serverName = "tcp:ajiedwi.database.windows.net,1433";
 		$conn = sqlsrv_connect($serverName, $connectionInfo);	
 	} catch (Exception $e){
