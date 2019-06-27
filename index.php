@@ -1,6 +1,6 @@
 <?php
 
-include 'connection.php'
+// include 'connection.php'
 
     // $sql_select = "SELECT * FROM user";
     // try{
@@ -12,6 +12,17 @@ include 'connection.php'
     // if(count($registrants) > 0) {
     //     echo 'sukses';   
     // }
+
+    $host = "ajiedwi.database.windows.net";
+    $user = "ajie";
+    $pass = "@jie4798";
+    $db = "ajiedwi";
+    try {
+        $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
+        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    } catch(Exception $e) {
+        echo "Failed: " . $e;
+    }
 ?>
 <!DOCTYPE html>
 <head>
