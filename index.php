@@ -1,6 +1,14 @@
 <?php
 
-include 'connection.php'
+// include 'connection.php'
+try {
+    $conn = new PDO("sqlsrv:server = tcp:ajiedwi.database.windows.net,1433; Database = ajiedwi", "ajie", "@jie4798");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
+}
 try {
             $sql_select = "SELECT * FROM Registration";
             $stmt = $conn->query($sql_select);
