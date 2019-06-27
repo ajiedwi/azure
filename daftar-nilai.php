@@ -2,6 +2,10 @@
 
 include 'connection.php'
 
+$sql = "SELECT * FROM 'dbo.user'";
+$result = $conn->query($sql); 
+var_dump($result); 
+
 ?>
 <!DOCTYPE html>
 <html>
