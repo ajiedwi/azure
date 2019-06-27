@@ -4,7 +4,10 @@ include 'connection.php'
 
 $sql = "select * from [dbo].[user]";
 $result = $conn->query($sql); 
-print_r($result);
+$registrants = $result->fetchAll(); 
+            if(count($registrants) > 0) {
+                echo 'sukses'
+            }
 
 ?>
 <!DOCTYPE html>
