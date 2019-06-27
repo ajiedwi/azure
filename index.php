@@ -2,12 +2,12 @@
 
 include 'connection.php'
 
-$sql = "select * from [dbo].[user]";
-$result = $conn->query($sql); 
-$registrants = $result->fetchAll(); 
-            if(count($registrants) > 0) {
-                echo 'sukses'
-            }
+// $sql = "select * from [dbo].[user]";
+// $result = $conn->query($sql); 
+// $registrants = $result->fetchAll(); 
+//             if(count($registrants) > 0) {
+//                 echo 'sukses'
+//             }
 
 ?>
 <!DOCTYPE html>
